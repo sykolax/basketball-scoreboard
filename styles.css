@@ -23,6 +23,13 @@ button {
     font-size: 18px;
 }
 
+.container {
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .primary-num {
     font-size: 90px;
 }
@@ -48,9 +55,3 @@ button {
     justify-content: space-between;
 }
 
-.container {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
