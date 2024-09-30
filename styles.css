@@ -5,6 +5,19 @@
     --hightlight-green: #B3FF85;
     --highlight-skyblue: #9AABD8;
 }
+
+body {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+}
+
+h3, #new-game-btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
 .flex-row {
     display: flex; 
     justify-content: space-between;
