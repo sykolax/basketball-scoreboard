@@ -14,13 +14,27 @@ h3, #new-game-btn {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h3 {
+    font-size: 30px;
+}
+
+.primary-num {
+    font-size: 90px;
+}
+
+.secondary-num {
+    font-size: 64px;
+}
+
 button {
     font-family: inherit;
+    font-size: 18px;
 }
 
 #new-game-btn {
     width: 150px;
     margin: auto;
+    font-size: 24px;
 }
 
 .basic-card {
