@@ -18,6 +18,11 @@ button {
     font-family: inherit;
 }
 
+#new-game-btn {
+    width: 150px;
+    margin: auto;
+}
+
 .basic-card {
     display: flex;
     flex-direction: column;
