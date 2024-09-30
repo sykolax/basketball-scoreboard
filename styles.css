@@ -10,12 +10,16 @@ body {
     font-family: 'Cursed Timer ULiL', sans-serif;
 }
 
-h3, #new-game-btn {
+h3, h4, #new-game-btn {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h3 {
     font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
 }
 
 button {
@@ -53,5 +57,6 @@ button {
 .flex-row {
     display: flex; 
     justify-content: space-between;
+    align-items: center;
 }
 
