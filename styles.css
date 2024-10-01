@@ -59,19 +59,6 @@ button {
     border: 1px solid var(--highlight-yellow);
 }
 
-#period-num {
-    color: var(--hightlight-green);
-}
-
-
-#new-game-btn {
-    width: 150px;
-    margin: auto;
-    font-size: 24px;
-    background-color: var(--hightlight-green);
-    color: var(--background-navy);
-}
-
 .basic-card {
     display: flex;
     flex-direction: column;
@@ -86,4 +73,16 @@ button {
 
 .score-btn-container {
     gap: 10px;
+}
+
+#period-num {
+    color: var(--hightlight-green);
+}
+
+#new-game-btn {
+    width: 150px;
+    margin: auto;
+    font-size: 24px;
+    background-color: var(--hightlight-green);
+    color: var(--background-navy);
 }
