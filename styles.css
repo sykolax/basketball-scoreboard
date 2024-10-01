@@ -48,12 +48,18 @@ button {
 
 .secondary-num {
     font-size: 64px;
-    color: var(--hightlight-green);
+    color: var(--highlight-yellow);
+}
+
+.foul-btn {
+    color: var(--highlight-yellow);
+    border: 1px solid var(--highlight-yellow);
 }
 
 #period-num {
-    color: var(--highlight-yellow);
+    color: var(--hightlight-green);
 }
+
 
 #new-game-btn {
     width: 150px;
