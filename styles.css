@@ -36,7 +36,7 @@ button {
 }
 
 .container {
-    width: 600px;
+    max-width: 600px;
     margin: auto;
     padding: 50px 0;
     display: flex;
@@ -84,3 +84,6 @@ button {
     align-items: center;
 }
 
+.score-btn-container {
+    gap: 10px;
+}
