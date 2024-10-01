@@ -31,6 +31,8 @@ button {
     background-color: var(--background-navy);
     color: var(--highlight-skyblue);
     border: 1px solid var(--highlight-skyblue);
+    border-radius: 5px;
+    padding: 8px 6px;
 }
 
 .container {
