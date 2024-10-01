@@ -76,6 +76,12 @@ button {
     gap: 10px;
 }
 
+.primary-num, .secondary-num {
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 #period-num {
     color: var(--hightlight-green);
 }
