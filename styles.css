@@ -8,6 +8,8 @@
 
 body {
     font-family: 'Cursed Timer ULiL', sans-serif;
+    background-color: var(--background-navy);
+    color: white;
 }
 
 h3, h4, #new-game-btn {
@@ -26,6 +28,9 @@ h4 {
 button {
     font-family: inherit;
     font-size: 18px;
+    background-color: var(--background-navy);
+    color: var(--highlight-skyblue);
+    border: 1px solid var(--highlight-skyblue);
 }
 
 .container {
@@ -38,16 +43,24 @@ button {
 
 .primary-num {
     font-size: 90px;
+    color: var(--highlight-red);
 }
 
 .secondary-num {
     font-size: 64px;
+    color: var(--hightlight-green);
+}
+
+#period-num {
+    color: var(--highlight-yellow);
 }
 
 #new-game-btn {
     width: 150px;
     margin: auto;
     font-size: 24px;
+    background-color: var(--hightlight-green);
+    color: var(--background-navy);
 }
 
 .basic-card {
