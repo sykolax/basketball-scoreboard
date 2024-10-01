@@ -1,8 +1,14 @@
 let homeScore = 0;
 let guestScore = 0;
 
+let homeFoul = 0;
+let guestFoul = 0;
+
 let homeScoreEl = document.getElementById("home-score");
 let guestScoreEl = document.getElementById("guest-score");
+
+let homeFoulEl = document.getElementById("home-foul");
+let guestFoulEl = document.getElementById("guest-foul");
 
 function incrementScore(team, score) {
     if (team === "home") {
@@ -14,6 +20,17 @@ function incrementScore(team, score) {
     }
 }
 
+function incrementFoul(team) {
+    if (team === "home") {
+        homeFoul += 1;
+        homeFoulEl.innerText = homeFoul;
+    } else {
+        guestFoul += 1;
+        guestFoulEl.innerText = guestFoul;
+    }
+}
+
+// Add event listers when DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("home-plus1").addEventListener("click", function() {
         incrementScore('home', 1);
@@ -34,4 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("guest-plus3").addEventListener("click", function() {
         incrementScore('guest', 3);
     });
+
+    document.getElementById("home-foul-plus1").addEventListener("click", function () {incrementFoul('home')});
+    document.getElementById("guest-foul-plus1").addEventListener("click", function () {incrementFoul('guest')});
 });
+
