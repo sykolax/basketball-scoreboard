@@ -1,6 +1,7 @@
+const PERIODTIME = 25 * 60;
 let homeScore = 0;
 let guestScore = 0;
-let timeLeft = 25 * 60;
+let timeLeft = PERIODTIME;
 
 let period = 1;
 
@@ -14,6 +15,7 @@ let homeFoulEl = document.getElementById("home-foul");
 let guestFoulEl = document.getElementById("guest-foul");
 
 let timerEl = document.getElementById("timer");
+let periodEl = document.getElementById("period-num");
 
 function incrementScore(team, score) {
     if (team === "home") {
@@ -35,7 +37,36 @@ function incrementFoul(team) {
     }
 }
 
+function stopTimer(timerId) {
+    clearInterval(timerId);
+}
 
+function resetTimer(timerId) {
+    timeLeft = PERIODTIME;
+    clearInterval(timerId);
+}
+
+function startTimer() {
+    let timerId = setInterval(() => {
+        timerEl.textContent = parseInt(timeLeft/60).toString().padStart(2, '0') + ":" + (timeLeft%60).toString().padStart(2, '0');
+        timeLeft -= 1;
+        if (timeLeft === -1) {
+            nextPeriod(timerId);
+        }
+       
+    }, 1000);
+}
+
+function nextPeriod(timerId) {
+    if (period < 4) {
+         period += 1;
+         periodEl.textContent = period;
+         resetTimer(timerId);
+         startTimer();
+    } else {
+        stopTimer(timerId);
+    }
+}
 
 // Add event listers when DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
@@ -62,10 +93,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("home-foul-plus1").addEventListener("click", function () {incrementFoul('home')});
     document.getElementById("guest-foul-plus1").addEventListener("click", function () {incrementFoul('guest')});
 
-    let timerId = setInterval(() => {
-        timeLeft -= 1;
-        timerEl.textContent = parseInt(timeLeft/60).toString().padStart(2, '0') + ":" + (timeLeft%60).toString().padStart(2, '0');
-    }, 1000);
+    startTimer();
+
 
 });
 
