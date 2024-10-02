@@ -68,6 +68,22 @@ function nextPeriod(timerId) {
     }
 }
 
+function startNewGame() {
+    timeLeft = PERIODTIME;
+    homeScore = 0;
+    homeFoul = 0;
+    guestScore = 0;
+    guestFoul = 0;
+    period = 1;
+
+    homeScoreEl.textContent = homeScore;
+    homeFoulEl.textContent = homeFoul;
+    guestScoreEl.textContent = guestScore;
+    guestFoulEl.textContent = guestFoul;
+
+    periodEl.textContent = period;
+}
+
 // Add event listers when DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("home-plus1").addEventListener("click", function() {
@@ -95,6 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     startTimer();
 
-
+    document.getElementById("new-game-btn").addEventListener("click", startNewGame);
 });
 
